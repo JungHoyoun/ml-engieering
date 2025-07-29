@@ -115,9 +115,16 @@ sys.append
 * **`justMyCode: false`** 설정을 통해 외부 코드까지 추적할 수 있습니다:
 
 ```json
-{
-  "justMyCode": false
-}
+"configurations": [
+    {
+        "name": "Python Debugger: Current File",
+        "type": "debugpy",
+        "request": "launch",
+        "program": "${file}",
+        "console": "integratedTerminal",
+        "justMyCode": false // <- 여기
+    }
+]
 ```
 
 * 단, C++/Rust 등의 native 라이브러리 내부에서 난 오류는 Python 디버거로는 추적할 수 없습니다.

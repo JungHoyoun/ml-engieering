@@ -1,0 +1,12 @@
+
+### Question Attn레이어와 FFN레이어의 최적의 파라미터 비율은?
+
+Optional
+!Distilation 의 경우
+inference가 동반된다. 
+mfu 50% 등을 뽑아내기 쉽지않다. 왜냐하면 prefil과 decoding으로 나뉘기 때문이다. 스토리지가 충분하다면 미리 오랫동안 저비용 gpu로 뽑아놀 수도있다. 
+https://arxiv.org/pdf/2502.08606
+
+MLA의 경우
+mla는 attention에 들어간다. 그래서 ffn에서 파생되는 첫번째항은 변하지 않고 두번째, 세번째 항을 바꾸면 된다. 
+
